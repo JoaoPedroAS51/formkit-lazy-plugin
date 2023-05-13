@@ -1,8 +1,8 @@
 {
-  "name": "packageName",
+  "name": "formkit-lazy-plugin",
   "version": "0.0.0",
-  "description": "",
-  "repository": "unjs/packageName",
+  "description": "FormKit Lazy plugin",
+  "repository": "JoaoPedroAS51/formkit-lazy-plugin",
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
