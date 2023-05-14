@@ -1,4 +1,17 @@
 <script setup>
+const fetchData = () => {
+  return new Promise((resolve) =>
+    setTimeout(
+      () =>
+        resolve({
+          name: 'Joe Doe',
+          flavors: ['chocolate', 'strawberry'],
+        }),
+      1000
+    )
+  )
+}
+
 async function submit() {
   await new Promise((r) => setTimeout(r, 1000))
   alert('Submitted! 🎉')
@@ -14,7 +27,7 @@ async function submit() {
       height="50"
       class="logo"
     />
-    <FormKit type="form" #default="{ value }"  @submit="submit">
+    <FormKit type="form" #default="{ value }" :lazy="fetchData" @submit="submit">
       <FormKit type="text" name="name" label="Name" help="What do people call you?" />
       <FormKit
         type="checkbox"
