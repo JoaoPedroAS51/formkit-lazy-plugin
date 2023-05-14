@@ -61,11 +61,6 @@ export function createLazyPlugin(LazyOptions?: LazyOptions): FormKitPlugin {
         node.config.disabled = false
       }
     })
-
-    // Default error handler
-    node.on('lazy:error', ({ payload }) => {
-      console.error(payload)
-    })
   }
 
   return lazyPlugin
