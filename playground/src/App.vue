@@ -5,7 +5,7 @@ const fetchData = () => {
       () =>
         resolve({
           name: 'Joe Doe',
-          flavors: ['chocolate', 'strawberry'],
+          flavors: ['chocolate', 'strawberry']
         }),
       1000
     )

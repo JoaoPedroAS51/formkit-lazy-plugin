@@ -5,7 +5,7 @@ import { createLazyPlugin } from '../..'
 
 const config: DefaultConfigOptions = {
   icons: { ...genesisIcons },
-  plugins: [createLazyPlugin()],
+  plugins: [createLazyPlugin()]
 }
 
 export default config
