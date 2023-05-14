@@ -28,6 +28,10 @@
     "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
     "test": "pnpm lint && vitest run --coverage"
   },
+  "dependencies": {
+    "@formkit/core": "^0.17.0",
+    "@formkit/utils": "^0.17.0"
+  },
   "devDependencies": {
     "@vitest/coverage-c8": "^0.30.1",
     "changelogen": "^0.5.3",
