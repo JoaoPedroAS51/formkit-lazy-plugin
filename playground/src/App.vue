@@ -7,7 +7,7 @@ const fetchData = () => {
           name: 'Joe Doe',
           flavors: ['chocolate', 'strawberry']
         }),
-      1000
+      3000
     )
   )
 }
