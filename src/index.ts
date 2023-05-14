@@ -2,10 +2,11 @@ import { reset, type FormKitNode, type FormKitPlugin } from '@formkit/core'
 import { init, undefine } from '@formkit/utils'
 
 declare module '@formkit/core' {
-  // TODO: Add `lazy` prop to FormKitProps
-  // interface FormKitProps {
-  //   lazy: (() => Promise<object>) | Promise<object>
-  // }
+  interface FormKitNodeExtensions {
+    props: Partial<{
+      lazy: (() => Promise<object>) | Promise<object>
+    }>
+  }
 
   interface FormKitHooks {
     beforeLazy: FormKitDispatcher<Record<string, any> | false>
@@ -42,9 +43,7 @@ export function createLazyPlugin(LazyOptions?: LazyOptions): FormKitPlugin {
       node.config.disabled = true
 
       try {
-        const lazy = node.props.lazy as
-          | (() => Promise<object>)
-          | Promise<object>
+        const lazy = node.props.lazy!
         const state = await (typeof lazy === 'function' ? lazy() : lazy)
 
         // Set `initial` state, this will be used to reset the form.
