@@ -8,16 +8,23 @@ const fetchData = () => {
             firstName: 'Joe',
             lastName: 'Doe'
           },
-          flavors: ['chocolate', 'strawberry']
+          flavors: ['chocolate', 'strawberry'],
+          address: {
+            street: '123 Main St',
+            city: 'New York',
+            state: 'NY',
+            zip: '10001'
+          }
         }),
       3000
     )
   )
 }
 
-async function submit() {
+async function submit(data) {
+  console.log({ data });
   await new Promise((r) => setTimeout(r, 1000))
-  alert('Submitted! 🎉')
+  alert(`${data.name.firstName}, you form was submitted! 🎉`)
 }
 </script>
 
@@ -51,6 +58,13 @@ async function submit() {
         }"
         validation="required|min:2"
       />
+
+      <FormKit type="group" name="address">
+          <FormKit type="text" name="street" label="Street"/>
+          <FormKit type="text" name="city" label="city"/>
+          <FormKit type="text" name="state" label="state"/>
+          <FormKit type="text" name="zip" label="zip"/>
+      </FormKit>
 
       <FormKit
         type="checkbox"
