@@ -4,7 +4,10 @@ const fetchData = () => {
     setTimeout(
       () =>
         resolve({
-          name: 'Joe Doe',
+          name: {
+            firstName: 'Joe',
+            lastName: 'Doe'
+          },
           flavors: ['chocolate', 'strawberry']
         }),
       3000
@@ -28,7 +31,11 @@ async function submit() {
       class="logo"
     />
     <FormKit type="form" #default="{ value }" :lazy="fetchData" @submit="submit">
-      <FormKit type="text" name="name" label="Name" help="What do people call you?" />
+
+      <FormKit type="group" name="name">
+        <FormKit type="text" name="firstName" label="First name" help="What is your first name?" />
+        <FormKit type="text" name="lastName" label="First name" help="What is your last name?" />
+      </FormKit>
       <FormKit
         type="checkbox"
         name="flavors"
