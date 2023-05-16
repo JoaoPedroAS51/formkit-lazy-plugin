@@ -58,12 +58,11 @@ async function submit(data) {
         }"
         validation="required|min:2"
       />
-
       <FormKit type="group" name="address">
-          <FormKit type="text" name="street" label="Street"/>
-          <FormKit type="text" name="city" label="city"/>
-          <FormKit type="text" name="state" label="state"/>
-          <FormKit type="text" name="zip" label="zip"/>
+        <FormKit type="text" name="street" label="Street"/>
+        <FormKit type="text" name="city" label="city"/>
+        <FormKit type="text" name="state" label="state"/>
+        <FormKit type="text" name="zip" label="zip"/>
       </FormKit>
 
       <FormKit
