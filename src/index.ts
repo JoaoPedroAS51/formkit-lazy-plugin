@@ -40,7 +40,7 @@ export function createLazyPlugin(LazyOptions?: LazyOptions): FormKitPlugin {
         return
       }
 
-      node.config.disabled = true
+      node.props.disabled = true
 
       try {
         const lazy = node.props.lazy!
@@ -58,7 +58,7 @@ export function createLazyPlugin(LazyOptions?: LazyOptions): FormKitPlugin {
       } catch (error) {
         node.emit('lazy:error', error)
       } finally {
-        node.config.disabled = false
+        node.props.disabled = false
       }
     })
   }
