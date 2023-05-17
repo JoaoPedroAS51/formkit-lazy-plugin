@@ -4,17 +4,27 @@ const fetchData = () => {
     setTimeout(
       () =>
         resolve({
-          name: 'Joe Doe',
-          flavors: ['chocolate', 'strawberry']
+          name: {
+            firstName: 'Joe',
+            lastName: 'Doe'
+          },
+          flavors: ['chocolate', 'strawberry'],
+          address: {
+            street: '123 Main St',
+            city: 'New York',
+            state: 'NY',
+            zip: '10001'
+          }
         }),
       3000
     )
   )
 }
 
-async function submit() {
+async function submit(data) {
+  console.log({ data });
   await new Promise((r) => setTimeout(r, 1000))
-  alert('Submitted! 🎉')
+  alert(`${data.name.firstName}, you form was submitted! 🎉`)
 }
 </script>
 
@@ -28,7 +38,11 @@ async function submit() {
       class="logo"
     />
     <FormKit type="form" #default="{ value }" :lazy="fetchData" @submit="submit">
-      <FormKit type="text" name="name" label="Name" help="What do people call you?" />
+
+      <FormKit type="group" name="name">
+        <FormKit type="text" name="firstName" label="First name" help="What is your first name?" />
+        <FormKit type="text" name="lastName" label="First name" help="What is your last name?" />
+      </FormKit>
       <FormKit
         type="checkbox"
         name="flavors"
@@ -44,6 +58,12 @@ async function submit() {
         }"
         validation="required|min:2"
       />
+      <FormKit type="group" name="address">
+        <FormKit type="text" name="street" label="Street"/>
+        <FormKit type="text" name="city" label="city"/>
+        <FormKit type="text" name="state" label="state"/>
+        <FormKit type="text" name="zip" label="zip"/>
+      </FormKit>
 
       <FormKit
         type="checkbox"
