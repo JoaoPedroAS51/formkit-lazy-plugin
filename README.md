@@ -1,4 +1,4 @@
-# packageName
+# formkit-lazy-plugin
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -7,7 +7,7 @@
 [![License][license-src]][license-href]
 [![JSDocs][jsdocs-src]][jsdocs-href]
 
-This is my package description.
+The Lazy plugin for FormKit allows you to effortlessly handle asynchronous data fetching and form population. With this plugin, you can easily load data into your form components while displaying a loading state until the data is resolved.
 
 ## Usage
 
@@ -15,24 +15,45 @@ Install package:
 
 ```sh
 # npm
-npm install packageName
+npm install formkit-lazy-plugin
 
 # yarn
-yarn add packageName
+yarn add formkit-lazy-plugin
 
 # pnpm
-pnpm install packageName
+pnpm install formkit-lazy-plugin
 ```
 
-Import:
+Add to `formkit.config`:
 
 ```js
 // ESM
-import {} from "packageName";
+import { createLazyPlugin } from "formkit-lazy-plugin";
 
 // CommonJS
-const {} = require("packageName");
+const { createLazyPlugin } = require("formkit-lazy-plugin");
+
+// Formkit config
+const config: DefaultConfigOptions = {
+  plugins: [createLazyPlugin()]
+}
 ```
+
+Add the `lazy` prop to your FormKit component and pass either a promise or a function that returns a promise. This promise represents the asynchronous data fetching operation.
+
+```vue
+<script setup>
+const fetchData = () => fetch(...)
+</script>
+
+<template>
+  <FormKit type="form" :lazy="fetchData">
+    ...
+  </FormKit>
+</template>
+```
+
+As soon as the promise is resolved, the form will automatically populate with the fetched data. In the meantime, the form will display a loading state, providing a smooth user experience.
 
 ## Development
 
