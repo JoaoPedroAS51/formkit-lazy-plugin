@@ -71,15 +71,15 @@ Published under [MIT License](./LICENSE).
 
 <!-- Badges -->
 
-[npm-version-src]: https://img.shields.io/npm/v/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-version-href]: https://npmjs.com/package/packageName
-[npm-downloads-src]: https://img.shields.io/npm/dm/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[npm-downloads-href]: https://npmjs.com/package/packageName
-[codecov-src]: https://img.shields.io/codecov/c/gh/unjs/packageName/main?style=flat&colorA=18181B&colorB=F0DB4F
-[codecov-href]: https://codecov.io/gh/unjs/packageName
-[bundle-src]: https://img.shields.io/bundlephobia/minzip/packageName?style=flat&colorA=18181B&colorB=F0DB4F
-[bundle-href]: https://bundlephobia.com/result?p=packageName
-[license-src]: https://img.shields.io/github/license/unjs/packageName.svg?style=flat&colorA=18181B&colorB=F0DB4F
-[license-href]: https://github.com/unjs/packageName/blob/main/LICENSE
+[npm-version-src]: https://img.shields.io/npm/v/formkit-lazy-plugin?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-version-href]: https://npmjs.com/package/formkit-lazy-plugin
+[npm-downloads-src]: https://img.shields.io/npm/dm/formkit-lazy-plugin?style=flat&colorA=18181B&colorB=F0DB4F
+[npm-downloads-href]: https://npmjs.com/package/formkit-lazy-plugin
+[codecov-src]: https://img.shields.io/codecov/c/gh/JoaoPedroAS51/formkit-lazy-plugin/main?style=flat&colorA=18181B&colorB=F0DB4F
+[codecov-href]: https://codecov.io/gh/JoaoPedroAS51/formkit-lazy-plugin
+[bundle-src]: https://img.shields.io/bundlephobia/minzip/formkit-lazy-plugin?style=flat&colorA=18181B&colorB=F0DB4F
+[bundle-href]: https://bundlephobia.com/result?p=formkit-lazy-plugin
+[license-src]: https://img.shields.io/github/license/JoaoPedroAS51/formkit-lazy-plugin.svg?style=flat&colorA=18181B&colorB=F0DB4F
+[license-href]: https://github.com/JoaoPedroAS51/formkit-lazy-plugin/blob/main/LICENSE
 [jsdocs-src]: https://img.shields.io/badge/jsDocs.io-reference-18181B?style=flat&colorA=18181B&colorB=F0DB4F
-[jsdocs-href]: https://www.jsdocs.io/package/packageName
+[jsdocs-href]: https://www.jsdocs.io/package/formkit-lazy-plugin
